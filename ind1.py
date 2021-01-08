@@ -33,12 +33,12 @@ class Payment:
         # self.experience()
 
     def read(self):
-        full_name = input('Enter your full name: ')
-        salary = input('Enter salary: ')
-        year = input('Enter year of joining: ')
-        percent = input('Enter percentage of premium: ')
-        days_worked = input('Enter number of days worked in a month: ')
-        working_days = input('Enter number of working days in a month: ')
+        full_name = input('Введите  имя: ')
+        salary = input('Введите зарплату: ')
+        year = input('Введите год вступления ')
+        percent = input('Введите процент премии: ')
+        days_worked = input('Введите количество отработанных дней в месяце: ')
+        working_days = input('Введите количество рабочих дней в месяце: ')
 
         self.full_name = full_name
         self.salary = int(salary)
@@ -59,9 +59,9 @@ class Payment:
         print(f"{self.percent}")
         print(f"{self.days_worked}")
         print(f"{self.working_days}")
-        # print(f"Withholding amount: {round(self.held_amount)}")
-        # print(f"Сalculated amount handed out: {round(self.hand_amount)}")
-        # print(f"Experience: {self.exp} year(s)")
+        # print(f"Сумма удержания: {round(self.held_amount)}")
+        # print(f"Рассчитанная выданная сумма: {round(self.hand_amount)}")
+        # print(f"Опыт: {self.exp} year(s)")
 
     def accrued_amount(self):
         a = self.salary / self.working_days
@@ -83,8 +83,8 @@ class Payment:
         return b * percent - (self.salary / self.working_days) * self.days_worked
 
     def experience(self):
-        # self.exp = 2020 - self.year
-        return 2020 - self.year
+        # self.exp = 2021 - self.year
+        return 2021 - self.year
 
 
 if __name__ == '__main__':
